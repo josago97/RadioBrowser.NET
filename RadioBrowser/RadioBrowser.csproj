@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+    <PackageId>RadioBrowserNet</PackageId>
+    <Title>RadioBrowserNet</Title>
+	<PackageLicenseExpression>LGPL</PackageLicenseExpression>
+	<RepositoryUrl>https://github.com/josago97/RadioBrowserNet</RepositoryUrl>
+	<PackageTags>Radio</PackageTags>
+	<Version>0.0.1</Version>
+	<Description>Wrapper for https://www.radio-browser.info</Description>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+	  <_Parameter1>$(MSBuildProjectName).Tests</_Parameter1>
+	</AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
