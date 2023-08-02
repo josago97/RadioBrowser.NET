@@ -11,6 +11,7 @@
 	<Version>0.0.1</Version>
 	<Description>Wrapper for https://www.radio-browser.info</Description>
 	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<Authors>Jose97</Authors>
   </PropertyGroup>
 
   <ItemGroup>
