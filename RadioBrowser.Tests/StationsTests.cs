@@ -15,12 +15,15 @@ public class StationsTests : BaseRadioBrowserClientTest
     {
         AdvancedSearchOptions options = new AdvancedSearchOptions()
         {
-            Limit = 1000
+            Limit = 10,
+            Order = "votes",
+            Reverse = true,
         };
 
         StationInfo[] stations = await Client.Stations.AdvancedSearchAsync(options);
 
-        Assert.True(stations.Length == 1000);
+        Assert.True(stations.Length == 10);
+        Assert.True(stations.First().Votes > stations.Last().Votes);
     }
 
     [Fact]

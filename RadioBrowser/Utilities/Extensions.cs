@@ -22,7 +22,8 @@ namespace RadioBrowser.Utilities
                     string valueString = httpParamAttribute?.Parser?.Parse(value) ?? value.ToString();
                     string name = httpParamAttribute?.Name ?? property.Name.ToLower();
 
-                    TypeCode propertyTypeCode = Type.GetTypeCode(property.PropertyType);
+                    Type propertyType = property.PropertyType;
+                    TypeCode propertyTypeCode = Type.GetTypeCode(Nullable.GetUnderlyingType(propertyType) ?? propertyType);
 
                     if (propertyTypeCode == TypeCode.Boolean)
                         valueString = valueString.ToLower();

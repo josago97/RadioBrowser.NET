@@ -12,7 +12,7 @@ namespace RadioBrowser.Utilities.JsonConverters
             Uri result = null;
             string url = reader.GetString();
 
-            if (string.IsNullOrEmpty(url) || url == "null")
+            if (!string.IsNullOrEmpty(url) || url == "null")
             {
                 url = url.Replace(',', '.').Replace("..", ".");
 

@@ -8,7 +8,7 @@
 	<PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
 	<RepositoryUrl>https://github.com/josago97/RadioBrowserNet</RepositoryUrl>
 	<PackageTags>Radio</PackageTags>
-	<Version>0.0.1</Version>
+	<Version>0.0.2</Version>
 	<Description>Wrapper for https://www.radio-browser.info</Description>
 	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	<Authors>Jose97</Authors>
