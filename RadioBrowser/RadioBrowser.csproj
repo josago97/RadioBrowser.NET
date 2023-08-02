@@ -5,7 +5,7 @@
     <Nullable>disable</Nullable>
     <PackageId>RadioBrowserNet</PackageId>
     <Title>RadioBrowserNet</Title>
-	<PackageLicenseExpression>LGPL</PackageLicenseExpression>
+	<PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
 	<RepositoryUrl>https://github.com/josago97/RadioBrowserNet</RepositoryUrl>
 	<PackageTags>Radio</PackageTags>
 	<Version>0.0.1</Version>
