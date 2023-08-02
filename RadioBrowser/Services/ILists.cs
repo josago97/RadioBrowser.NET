@@ -23,11 +23,11 @@ namespace RadioBrowser
         /// <summary>
         /// Get country states.
         /// </summary>
-        /// <param name="country">If it is not null,  it will only return the states in this country.</param>
         /// <param name="filter">If it is not null, it will only return the ones containing the filter as substring in the name.</param>
+        /// <param name="country">If it is not null,  it will only return the states in this country.</param>
         /// <param name="options">Query options.</param>
         /// <returns>Array of country states.</returns>
-        Task<StateInfo[]> GetStatesAsync(string country = null, string filter = null, ExtendedQueryOptions options = null);
+        Task<StateInfo[]> GetStatesAsync(string filter = null, string country = null, ExtendedQueryOptions options = null);
 
         /// <summary>
         /// Get languages.
