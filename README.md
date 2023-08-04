@@ -29,7 +29,7 @@ To use advanced search use `AdvancedSearchOptions`
 
 ```c#
 RadioBrowserClient client = new RadioBrowserClient();
-StationInfo[] stations = await client.Stations.AdvancedAsync(new AdvancedSearchOptions
+StationInfo[] stations = await client.Stations.AdvancedSearchAsync(new AdvancedSearchOptions
 {
     Language = "spanish",
     Codec = "mp3",
