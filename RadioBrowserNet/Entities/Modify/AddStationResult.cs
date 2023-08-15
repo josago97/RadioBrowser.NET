@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RadioBrowserNet.Entities.Modify
+namespace RadioBrowserNet
 {
     public class AddStationResult : ActionResult
     {

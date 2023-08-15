@@ -1,4 +1,4 @@
-﻿namespace RadioBrowserNet.Entities.Stations
+﻿namespace RadioBrowserNet
 {
     public enum StationOrders
     {

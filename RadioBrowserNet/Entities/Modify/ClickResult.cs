@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 
-namespace RadioBrowserNet.Entities.Modify
+namespace RadioBrowserNet
 {
     public class ClickResult : ActionResult
     {

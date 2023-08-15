@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 using RadioBrowserNet.Utilities.JsonConverters;
 
-namespace RadioBrowserNet.Entities.Stations
+namespace RadioBrowserNet
 {
     public class StationCheckStep
     {
@@ -35,9 +33,9 @@ namespace RadioBrowserNet.Entities.Stations
         [JsonConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
-       
-        
-        
+
+
+
         /// <summary>
         /// The url that this step of the checking process handled.
         /// </summary>

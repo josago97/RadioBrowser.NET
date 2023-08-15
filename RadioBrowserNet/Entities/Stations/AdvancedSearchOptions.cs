@@ -1,5 +1,4 @@
-﻿using RadioBrowserNet.Entities.Stations;
-using RadioBrowserNet.Utilities.HttpParsers;
+﻿using RadioBrowserNet.Utilities.HttpParsers;
 
 namespace RadioBrowserNet
 {

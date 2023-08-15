@@ -1,5 +1,3 @@
-using RadioBrowserNet.Entities.Stations;
-
 namespace RadioBrowserNet.Tests;
 
 public class StationsTests : BaseRadioBrowserClientTest

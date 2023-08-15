@@ -1,6 +1,6 @@
 ﻿using RadioBrowserNet.Utilities.HttpParsers;
 
-namespace RadioBrowserNet.Entities
+namespace RadioBrowserNet
 {
     public abstract class OrderedQueryOptions<TOrder> : ExtendedQueryOptions where TOrder : struct
     {

@@ -1,4 +1,4 @@
-﻿namespace RadioBrowserNet.Entities.Lists
+﻿namespace RadioBrowserNet
 {
     public enum ListOrders
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using RadioBrowserNet.Utilities.HttpParsers;
 
-namespace RadioBrowserNet.Entities.Modify
+namespace RadioBrowserNet
 {
     public class NewStation
     {

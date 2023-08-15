@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 using RadioBrowserNet.Utilities.JsonConverters;
 
-namespace RadioBrowserNet.Entities.Stations
+namespace RadioBrowserNet
 {
     public class StationCheck
     {

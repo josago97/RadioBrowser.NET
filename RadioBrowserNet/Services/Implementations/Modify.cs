@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using RadioBrowserNet.Entities.Modify;
 using RadioBrowserNet.Utilities;
 
 namespace RadioBrowserNet.Services.Implementations

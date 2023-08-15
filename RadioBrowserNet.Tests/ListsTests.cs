@@ -1,6 +1,4 @@
-﻿using RadioBrowserNet.Entities.Lists;
-
-namespace RadioBrowserNet.Tests;
+﻿namespace RadioBrowserNet.Tests;
 
 public class ListsTests : BaseRadioBrowserClientTest
 {

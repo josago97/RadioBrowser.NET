@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using RadioBrowserNet.Entities.Lists;
 
 namespace RadioBrowserNet.Services.Implementations
 {
