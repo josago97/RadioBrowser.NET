@@ -8,6 +8,7 @@ namespace RadioBrowserNet
         public ILists Lists { get; }
         public IModify Modify { get; }
         public IStations Stations { get; }
+        public IServers Servers { get; }
         public System.Net.Http.HttpClient HttpClient { get; }
 
         /// <summary>
@@ -22,6 +23,7 @@ namespace RadioBrowserNet
             Lists = new Lists(httpClient);
             Modify = new Modify(httpClient);
             Stations = new Stations(httpClient);
+            Servers = new Servers(httpClient);
             HttpClient = httpClient;
         }
     }

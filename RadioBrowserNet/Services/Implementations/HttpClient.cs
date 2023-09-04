@@ -66,7 +66,8 @@ namespace RadioBrowserNet.Services.Implementations
 
         public async Task<T> GetAsync<T>(string endpoint)
         {
-            string json = await GetStringAsync($"/json/{endpoint}");
+            string url = endpoint.StartsWith("http") ? endpoint : $"/json/{endpoint}";
+            string json = await GetStringAsync(url);
 
             return JsonSerializer.Deserialize<T>(json, JsonSerializerOptions)!;
         }
