@@ -18,7 +18,7 @@ namespace RadioBrowserNet.Services.Implementations
 
         internal HttpClient(string? apiUrl = null, string? userAgent = null) : base()
         {
-            BaseAddress = new Uri("https://" + (apiUrl ?? GetRadioBrowserApiUrl() ?? DEFAULT_API_URL));
+            BaseAddress = new Uri($"https://{apiUrl ?? GetRadioBrowserApiUrl() ?? DEFAULT_API_URL}");
             DefaultRequestHeaders.UserAgent.ParseAdd(userAgent ?? "Mozilla/5.0");
             JsonSerializerOptions = new JsonSerializerOptions()
             {

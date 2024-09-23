@@ -29,7 +29,7 @@ public class StationsTests : BaseRadioBrowserClientTest
     [Fact]
     public async Task SearchByUuid()
     {
-        Guid uuid = Guid.Parse("941ef6f1-0699-4821-95b1-2b678e3ff62e");
+        Guid uuid = Guid.Parse("7fe99458-b6f2-4af0-95bc-e05977964622");
         StationInfo[] stations = await Client.Stations.SearchByUuidAsync(uuid);
 
         Assert.Single(stations);
@@ -38,11 +38,14 @@ public class StationsTests : BaseRadioBrowserClientTest
     [Fact]
     public async Task SearchByUuids()
     {
-        Guid uuid1 = Guid.Parse("941ef6f1-0699-4821-95b1-2b678e3ff62e");
-        Guid uuid2 = Guid.Parse("eb3ea075-a22f-4289-bfa1-b030ae6cae9d");
-        StationInfo[] stations = await Client.Stations.SearchByUuidAsync(new[] { uuid1, uuid2 });
+        Guid[] uuids = [
+            Guid.Parse("7fe99458-b6f2-4af0-95bc-e05977964622"),
+            Guid.Parse("9d69cc77-b698-40c0-8036-17cd1f09ca44")
+        ];
 
-        Assert.True(stations.Length == 2);
+        StationInfo[] stations = await Client.Stations.SearchByUuidAsync(uuids);
+
+        Assert.Equal(uuids.Length, stations.Length);
     }
 
     [Fact]
@@ -104,7 +107,7 @@ public class StationsTests : BaseRadioBrowserClientTest
         uint limit = 50;
         StationInfo[] stationsLimited = await Client.Stations.GetBrokenAsync(10, limit);
         Assert.NotEmpty(stationsLimited);
-        Assert.True(limit == stationsLimited.Length);
+        Assert.Equal((int)limit, stationsLimited.Length);
     }
 
     [Fact]
@@ -113,7 +116,7 @@ public class StationsTests : BaseRadioBrowserClientTest
         StationCheck[] checks = await Client.Stations.GetChecksAsync(limit: 1000);
         Assert.NotEmpty(checks);
 
-        Guid stationUuid = Guid.Parse("941ef6f1-0699-4821-95b1-2b678e3ff62e");
+        Guid stationUuid = Guid.Parse("7fe99458-b6f2-4af0-95bc-e05977964622");
         StationCheck[] stationChecks = await Client.Stations.GetChecksAsync(stationUuid);
         Assert.NotEmpty(stationChecks);
     }
@@ -121,9 +124,13 @@ public class StationsTests : BaseRadioBrowserClientTest
     [Fact]
     public async Task GetCheckSteps()
     {
-        Guid uuid1 = Guid.Parse("941ef6f1-0699-4821-95b1-2b678e3ff62e");
-        Guid uuid2 = Guid.Parse("eb3ea075-a22f-4289-bfa1-b030ae6cae9d");
-        StationCheckStep[] checkSteps = await Client.Stations.GetCheckStepsAsync(new[] { uuid1, uuid2 });
+        Guid[] uuids = [
+            Guid.Parse("7fe99458-b6f2-4af0-95bc-e05977964622"),
+            Guid.Parse("9d69cc77-b698-40c0-8036-17cd1f09ca44")
+        ];
+
+        StationCheckStep[] checkSteps = await Client.Stations.GetCheckStepsAsync(uuids);
+
         Assert.NotEmpty(checkSteps);
     }
 }

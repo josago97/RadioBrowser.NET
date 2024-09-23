@@ -41,40 +41,5 @@ namespace RadioBrowserNet.Services.Implementations
         {
             return string.Join('/', filters.Where(s => !string.IsNullOrEmpty(s)));
         }
-
-        /*
-        protected Task<T> GetAsync<T>(string baseUrl, object options)
-        {
-            string url = baseUrl;
-
-            string optionsUrl = options?.ToHttpUrlParams();
-            if (!string.IsNullOrEmpty(optionsUrl))
-            {
-                if (url.Contains('?'))
-                    url += "&" + optionsUrl;
-                else
-                    url += "?" + optionsUrl;
-            }
-
-            return GetAsync<T>(url);
-        }
-
-        protected Task<T> GetAsync<T>(string baseUrl, object options, params string[] filters)
-        {
-            string url = baseUrl;
-
-            string optionsUrl = options?.ToHttpUrlParams();
-            if (!string.IsNullOrEmpty(optionsUrl))
-            {
-                if (url.Contains('?'))
-                    url += "&" + optionsUrl;
-                else
-                    url += "?" + optionsUrl;
-            }
-
-            return GetAsync<T>(url);
-        }
-
-        */
     }
 }
